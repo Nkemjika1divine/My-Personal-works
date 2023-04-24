@@ -21,6 +21,27 @@
 int _printf(const char *format, ...);
 void print_buffer(char buffer[], int *buffer_ind);
 int _isdigit(char c);
+int print_arg_type(const char *fmt, int *ind, va_list list, char buffer[], int flags, int width, int precision, int size)
+
+int print_character(va_list types, char buffer[], int flags, int width, int precision, int size);
+int print_str(va_list types, char buffer[], int flags, int width, int precision, int size);
+int print_percentage(va_list types, char buffer[], int flags, int width, int precision, int size);
+
+int print_int(va_list types, char buffer[], int flags, int width, int precision, int size);
+int print_bin(va_list types, char buffer[], int flags, int width, int precision, int size);
+int print_unsigned_int(va_list types, char buffer[], int flags, int width, int precision, int size);
+int print_octa(va_list types, char buffer[], int flags, int width, int precision, int size);
+int print_hexadecimal(va_list types, char buffer[], int flags, int width, int precision, int size);
+int print_upper_hexa(va_list types, char buffer[], int flags, int width, int precision, int size)
+int print_non_printable(va_list types, char buffer[], int flags, int width, int precision, int size);
+int print_pointers(va_list types, char buffer[], int flags, int width, int precision, int size);
+int print_reverse(va_list types, char buffer[], int flags, int width, int precision, int size);
+int print_r13string(va_list types, char buffer[], int flags, int width, int precision, int size);
+
+
+int print_hexa(va_list types, char map_to[], char buffer[], int flags, char flag_ch, int width, int precision, int size);
+
+
 
 /*functions prototypes for flags, precision, width and size*/
 int _flags(const char *format, int *i);
