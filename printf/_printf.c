@@ -30,6 +30,7 @@ int _printf(const char *format, ...)
 	{
 		if (format[a] != '%')
 		{
+			/*if not a format specifier, store in buffer and increment buffer index */
 			buffer[buffer_ind++] = format[a];
 			if (buffer_ind == BUFFER_SIZE)
 				print_buffer(buffer, &buffer_ind);
@@ -38,6 +39,7 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
+			/* if a format specifier is found, process the specifier and the argument */
 			print_buffer(buffer, &buffer_ind);
 			flags = _flags(format, &a);
 			width = _width(format, &a, list);

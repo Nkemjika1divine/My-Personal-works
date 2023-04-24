@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * handle_write_char - Prints a string
+ * handle_write_char - Prints a char to output buffer
  *
  * @c: char types.
  * @buffer: Buffer array to handle print
@@ -25,6 +25,7 @@ int handle_write_char(char c, char buffer[], int flags, int width, int precision
 	if (flags & F_ZERO)
 		padd = '0';
 
+	/* character to print is stored in the buffer at index a, and the index is incremented*/
 	buffer[a++] = c;
 	buffer[a] = '\0';
 
